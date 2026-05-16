@@ -1,0 +1,96 @@
+%------------------------------------------------------------------------
+% Modelu template Trabalho Final do Curso (Thesis Writing) 
+% ba estudante departamentu Technical Computer and Informatics (TCI) 
+% Instituto Profissional de Canossa (IPDC)- 2026
+%------------------------------------------------------------------------
+
+%\documentclass[
+    %tetum,          % lian prinsipal ne'ebe uza
+    %portugues       % lian prinsipal segundo ne'ebe uza
+    %english         % lian adisional ne'ebe uza
+%]
+
+\documentclass[11pt, a4paper]{report}
+\usepackage[
+  top=3cm,
+  bottom=3cm,
+  left=3cm,
+  right=3cm
+]{geometry}
+\usepackage[brazil]{babel}
+\usepackage{natbib}
+\usepackage{amsmath}
+%\usepackage[colorlinks=true, linkcolor=black, citecolor=black]{hyperref}
+\usepackage[pdftex,
+colorlinks=true,
+bookmarks=true,
+linkcolor=black,
+citecolor=black,
+bookmarksopen=true]{hyperref}
+\usepackage{ragged2e}
+%\usepackage{bookmark}
+\usepackage{graphicx} % Required for inserting images
+\graphicspath{{figuras/}}
+
+%----------------------------------------------
+% Muda ba lian Tetum
+%----------------------------------------------
+
+\addto\captionsbrazil{
+\renewcommand{\contentsname}{Indise}
+\renewcommand{\listfigurename}{Lista Figura}
+\renewcommand{\listtablename}{Lista Tabela}
+\renewcommand{\chaptername}{Kapítulu}
+\renewcommand{\bibname}{Referénsia}
+}
+
+
+%----------------------------------------------
+% Informasaun kona ba dadus iha pajina titulu
+%----------------------------------------------
+\title{Trabalho Final do Curso}
+\author{<Naran estudante>}
+%\date{October 2025}
+
+\begin{document}
+
+\input{folhasdeinicio}
+%\input{folhadeaprovacao}
+%\input{folha-de-aprovacao}
+
+%\input{resumo}
+%\input{abstract}
+
+%\listafiguras
+%\listatabelas
+%\listadeabreviaturas
+
+\listoffigures % lista de figuras
+\thispagestyle{empty}
+\listoftables % lista da tabelas
+\thispagestyle{empty}
+\tableofcontents % sumario
+\cleardoublepage
+\thispagestyle{empty}
+%\pagenumbering{arabic}
+
+
+%----------------------------------------------
+% Secoes
+%----------------------------------------------
+\input{secoes/0-introdusaun}
+\input{secoes/1-referencial-teoria}
+\input{secoes/2-metodolojia}
+\input{secoes/3-rezultadu}
+\input{secoes/4-considerasaun}
+
+%----------------------------------------------
+% Bibliography
+%----------------------------------------------
+\cleardoublepage
+\phantomsection
+\addcontentsline{toc}{chapter}{Referénsia}
+\bibliographystyle{plainnat}
+\bibliography{bibliografia}
+
+\end{document}
